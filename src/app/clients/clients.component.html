@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Photo</th>
+    <th>Analyses</th>
+  </tr>
+  <tr *ngFor="let client of clients">
+    <td>{{ client.code }}</td>
+    <td>{{ client.nom }}</td>
+    <td>{{ client.prenom }}</td>
+    <td><img src="{{ client.photo }}" alt="avatar" width="50px" /></td>
+    <td>
+      <button class="btn btn-primary" (click)="goToAnalyses(client.code)">Analyses</button>
+    </td>
+  </tr>
+</table>

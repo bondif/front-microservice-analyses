@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <th>Nom</th>
+    <th>Date</th>
+    <th>Prix</th>
+    <th>Resultat</th>
+    <th>Resultat connu?</th>
+  </tr>
+  <tr *ngFor="let analyse of analyses">
+    <td>{{ analyse.id }}</td>
+    <td>{{ analyse.nom }}</td>
+    <td>{{ analyse.date }}</td>
+    <td>{{ analyse.prix }}</td>
+    <td>{{ analyse.resultat }}</td>
+    <td>{{ analyse.estResultatConnu ? "Oui" : "Non" }}</td>
+  </tr>
+</table>
